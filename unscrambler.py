@@ -64,7 +64,7 @@ def process():
 		else:
 			#result += str(l)
 			# choose most popular word
-			popular = sorted(l, key=lambda wrd:words[wrd])[-1]
+			popular = max(l, key=lambda wrd:words[wrd])
 			print(l, popular)
 			result += matchcase(popular, w)
 	else:
